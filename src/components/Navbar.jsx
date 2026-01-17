@@ -27,7 +27,8 @@ const Navbar = ({ onOpenBooking }) => {
         {/* Ab ye button Link ke bajaye ek functional button hai jo Modal trigger karega */}
         <button 
           onClick={onOpenBooking}
-          className="bg-red-600 cursor-pointer text-white px-6 py-2 rounded-full font-bold hover:bg-red-700 transition shadow-lg shadow-red-200 active:scale-95 transition-transform"
+          className="bg-red-600 cursor-pointer text-white px-6 py-2 rounded-full font-bold hover:bg-red-700
+            shadow-lg shadow-red-200 active:scale-95 transition-transform"
         >
           Book Now
         </button>
