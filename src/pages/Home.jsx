@@ -3,11 +3,12 @@ import { gsap } from 'gsap';
 import { Sparkles, Gauge, Award } from 'lucide-react';
 import Services from './Services';
 import Contact from './Contact';
-import CarShowcase from '../components/CarShowCase';
-import CarGallery from '../components/CarGallery';
-import CarComparison from '../components/CarComparison';
-import WhyChooseUs from '../components/WhyChooseUs';
-import FAQSection from '../components/FAQSection';
+import CarShowcase from '../components/Home/CarShowCase';
+import CarGallery from '../components/Home/CarGallery';
+import CarComparison from '../components/Home/CarComparison';
+import WhyChooseUs from '../components/common/WhyChooseUs';
+import FAQSection from '../components/Home/FAQSection';
+import Testimonials from '../components/Home/Testimonials';
 
 const Home = () => {
   const heroRef = useRef(null);
@@ -67,6 +68,7 @@ const Home = () => {
       <CarGallery/>
       <CarComparison/>
       <WhyChooseUs/>
+      <Testimonials/>
       <FAQSection/>
       <Contact/>
     </div>
