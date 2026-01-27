@@ -9,6 +9,7 @@ import WhyChooseUs from '../components/common/WhyChooseUs';
 import FAQSection from '../components/Home/FAQSection';
 import Testimonials from '../components/Home/Testimonials';
 import ServiceHero from '../components/Services/ServiceHero';
+import assets from '../assets/assets';
 
 const Home = () => {
   const heroRef = useRef(null);
@@ -28,7 +29,7 @@ const Home = () => {
       <section ref={heroRef} className="relative h-[90vh] flex items-center justify-center bg-slate-900 overflow-hidden">
         <div className="absolute inset-0 opacity-40">
            {/* Replace with a high-quality car wash image */}
-          <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&q=80" alt="Luxury Car" className="w-full h-full object-cover" />
+          <img src={assets.Car_1} alt="Luxury Car" className="w-full h-full object-cover" />
         </div>
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-6xl md:text-8xl font-black mb-4 tracking-tight uppercase">

@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import { Star } from 'lucide-react';
-import { gsap } from 'gsap';
-import ImageSlider from '../common/ImageSlider';
-
+import React, { useEffect, useRef } from "react";
+import { Star } from "lucide-react";
+import { gsap } from "gsap";
+import ImageSlider from "../common/ImageSlider";
+import assets from "../../assets/assets";
 
 const CarComparison = () => {
   const textRef = useRef(null);
@@ -14,7 +14,7 @@ const CarComparison = () => {
         opacity: 0,
         duration: 1,
         stagger: 0.2,
-        ease: "power3.out"
+        ease: "power3.out",
       });
     }, textRef);
     return () => ctx.revert();
@@ -23,12 +23,8 @@ const CarComparison = () => {
   return (
     <section className="bg-white py-16 px-6 md:px-12 lg:px-24 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
         {/* LEFT SIDE: Reusable Slider */}
-        <ImageSlider 
-          beforeImg="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?q=80&w=2070"
-          afterImg="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=2070"
-        />
+        <ImageSlider beforeImg={assets.Before_1} afterImg={assets.After_1} />
 
         {/* RIGHT SIDE: TEXT CONTENT */}
         <div ref={textRef} className="space-y-6">
@@ -42,8 +38,9 @@ const CarComparison = () => {
           </header>
 
           <p className="text-zinc-600 text-lg leading-relaxed animate-text font-medium">
-            Welcome to DUTT33's premium car detailing service. Whether you choose 
-            our mobile or unit-based services, we deliver results that last. 
+            Welcome to DUTT33's premium car detailing service. Whether you
+            choose our mobile or unit-based services, we deliver results that
+            last.
           </p>
 
           <ul className="space-y-4 animate-text">
@@ -52,7 +49,10 @@ const CarComparison = () => {
               "Ceramic coating for lasting protection",
               "Multi-stage car washing and deep cleaning",
             ].map((feature, index) => (
-              <li key={index} className="flex items-center gap-3 text-zinc-800 font-bold uppercase text-sm italic">
+              <li
+                key={index}
+                className="flex items-center gap-3 text-zinc-800 font-bold uppercase text-sm italic"
+              >
                 <Star className="text-red-600" size={18} fill="currentColor" />
                 {feature}
               </li>
@@ -63,7 +63,6 @@ const CarComparison = () => {
             Learn More
           </button>
         </div>
-
       </div>
     </section>
   );
