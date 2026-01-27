@@ -1,8 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { Sparkles, Gauge, Award } from 'lucide-react';
-import Services from './Services';
 import Contact from './Contact';
+import CarShowcase from '../components/Home/CarShowCase';
+import CarGallery from '../components/Home/CarGallery';
+import CarComparison from '../components/Home/CarComparison';
+import WhyChooseUs from '../components/common/WhyChooseUs';
+import FAQSection from '../components/Home/FAQSection';
+import Testimonials from '../components/Home/Testimonials';
+import ServiceHero from '../components/Services/ServiceHero';
 
 const Home = () => {
   const heroRef = useRef(null);
@@ -57,7 +63,13 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Services/>
+      <ServiceHero/>
+      <CarShowcase/>
+      <CarGallery/>
+      <CarComparison/>
+      <WhyChooseUs/>
+      <Testimonials/>
+      <FAQSection/>
       <Contact/>
     </div>
   );
